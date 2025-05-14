@@ -17,7 +17,7 @@ with open("engagement_encoders.pkl", "rb") as f:
 
 with open("gamer_profile_model.pkl", "rb") as f:
     profile_model = pickle.load(f)
-
+# TEST
 # 2. Indlæs Mistral 7B (lokalt)
 model_id = "./fine_tuned_mistral"  # ← lokal mappe med din trænede model
 print("🔄 Indlæser Mistral-model...")
