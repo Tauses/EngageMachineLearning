@@ -19,7 +19,7 @@ with open("gamer_profile_model.pkl", "rb") as f:
     profile_model = pickle.load(f)
 
 # 2. Indlæs Mistral 7B (lokalt)
-model_id = "mistralai/Mistral-7B-Instruct-v0.1"
+model_id = "./fine_tuned_mistral"  # ← lokal mappe med din trænede model
 print("🔄 Indlæser Mistral-model...")
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(
@@ -47,15 +47,13 @@ def predict_profile(features: dict):
 
 # 5. Funktion: generér respons med Mistral
 def generate_response(user_input: str, engagement_level: str, gamer_profile: int):
-    prompt = f"""
-[INST] Du er en hjælpsom, venlig AI. Brugerens engagementniveau er {engagement_level} og deres gamerprofil er cluster {gamer_profile}.
-Svar naturligt og menneskeligt.
-
-Bruger: {user_input}
-[/INST]
-"""
+    prompt = (
+        f"Player is a {engagement_level} engagement gamer, cluster {gamer_profile}. "
+        f"{user_input}"
+    )
     output = chat_pipeline(prompt)[0]["generated_text"]
-    return output.split("[/INST]")[-1].strip()
+    return output[len(prompt):].strip()
+
 
 # 6. Eksempeldata (erstat med brugerdata i praksis)
 default_user_features = {
