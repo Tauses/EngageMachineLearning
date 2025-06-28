@@ -10,11 +10,11 @@ A compact Python toolkit for analysing gamers behavioural data and chatting with
 
 <li><strong>Three chatbots</strong></li>
 
-<li>Heavy – fully automatic ML + Llama. Uses some regex for extracting user features (Chatbot_Heavy_Model.py)</li>
+  <li>Heavy – fully automatic ML + Llama. Uses some regex for extracting user features (Chatbot_Heavy_Model.py)</li>
 
-<li>Light – semi automatic/keyword‑triggered ML at user extraction features (Chatbot_Lighter_Model.py)</li>
+  <li>Light – semi automatic/keyword‑triggered ML at user extraction features (Chatbot_Lighter_Model.py)</li>
 
-<li>Stupid – rule‑based fallback and canned responses (Chatbot_Stupid.py)</li>
+  <li>Stupid – rule‑based fallback and canned responses (Chatbot_Stupid.py)</li>
 
 <li>Sentiment & keyword tracking with NLTK.</li>
 
