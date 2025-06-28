@@ -4,21 +4,21 @@ A compact Python toolkit for analysing gamers behavioural data and chatting with
 
 <h2>Key Features</h2>
 <ol>
-<li>Data profiling – K‑Means clustering (TrainProfiler.py) labels players into 6 intuitive segments.</li>
+  <li>Data profiling – K-Means clustering (<code>TrainProfiler.py</code>) labels players into 6 intuitive segments.</li>
 
-<li>Engagement prediction – Random‑Forest classifier (RFTrainBot.py) forecasts a player’s engagement level.</li>
+  <li>Engagement prediction – Random-Forest classifier (<code>RFTrainBot.py</code>) forecasts a player’s engagement level.</li>
 
-<li><strong>Three chatbots</strong></li>
+  <li><strong>Three chatbots</strong>
+    <ol>
+      <li>Heavy – fully automatic ML + Llama; bruger regex til at udtrække brugerfeatures (<code>Chatbot_Heavy_Model.py</code>).</li>
+      <li>Light – semi-automatic / keyword-triggered ML til brugerfeature-udtræk (<code>Chatbot_Lighter_Model.py</code>).</li>
+      <li>Stupid – rule-based fallback med foruddefinerede svar (<code>Chatbot_Stupid.py</code>).</li>
+    </ol>
+  </li>
 
-  <li>Heavy – fully automatic ML + Llama. Uses some regex for extracting user features (Chatbot_Heavy_Model.py)</li>
+  <li>Sentiment &amp; keyword tracking med NLTK.</li>
 
-  <li>Light – semi automatic/keyword‑triggered ML at user extraction features (Chatbot_Lighter_Model.py)</li>
-
-  <li>Stupid – rule‑based fallback and canned responses (Chatbot_Stupid.py)</li>
-
-<li>Sentiment & keyword tracking with NLTK.</li>
-
-<li>Local Llama 2 inference via llama‑cpp‑python (no external API keys).</li>
+  <li>Local Llama 2-inference via <em>llama-cpp-python</em> (ingen eksterne API-nøgler).</li>
 </ol>
 
 <h2>REQUIREMENTS</h2>
