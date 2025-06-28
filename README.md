@@ -8,7 +8,7 @@ A compact Python toolkit for analysing gamers behavioural data and chatting with
 
 <li>Engagement prediction – Random‑Forest classifier (RFTrainBot.py) forecasts a player’s engagement level.</li>
 
-<li><emb>Three chatbots</emb></li>
+<li><strong>Three chatbots</strong></li>
 
 <li>Heavy – fully automatic ML + Llama. Uses some regex for extracting user features (Chatbot_Heavy_Model.py)</li>
 
